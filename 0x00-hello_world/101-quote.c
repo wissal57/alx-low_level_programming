@@ -10,6 +10,3 @@ int main(void)
 	return (1);
 }
 
-
-====================================
-echo '**[TALIS](https://github.com/TALIS-PRO)**' >>
