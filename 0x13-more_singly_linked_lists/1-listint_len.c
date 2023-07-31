@@ -1,16 +1,21 @@
 #include "lists.h"
 
 /**
- * listint_len_recursive - returns the number of elements in a linked list recursively
+ * listint_len - returns the number of elements in a linked lists
  * @h: linked list of type listint_t to traverse
  *
  * Return: number of nodes
  */
-size_t listint_len_recursive(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
-	if (h == NULL) // Cas de base : si le nœud est NULL, la liste est vide, on retourne 0.
-		return 0;
+	size_t num = 0;
 
-	return 1 + listint_len_recursive(h->next); // Rappel récursif avec le nœud suivant et ajout de 1 au résultat.
+	while (h)
+	{
+		num++;
+		h = h->next;
+	}
+
+	return (num);
 }
 
